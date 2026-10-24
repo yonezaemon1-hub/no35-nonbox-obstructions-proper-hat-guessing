@@ -1,0 +1,62 @@
+--- v0.1/PROOF.md
++++ v0.2/PROOF.md
+@@ -1,8 +1,8 @@
+-# No.35 candidate v0.1 — Non-Box Obstructions for Proper Hat Guessing on Book Graphs
++# No.35 candidate v0.2 — Non-Box Obstructions for Proper Hat Guessing on Book Graphs
+ 
+ Ryutaro Yonezu / Yonezu Research Lab. Research candidate dated 2026-10-24 (Asia/Tokyo).
+ 
+-**Status:** Unrefereed working note. The arguments and finite checks below have been reviewed internally in this session; no independent external audit or scholarly novelty determination has been completed. Not a public release or a settled exact-value claim. All rights reserved.
++**Status:** Unrefereed working note. A user-supplied external audit of v0.1 reports PROOF PASS conditional on cited theorems, COMPUTATION PASS, REFERENCES PARTIAL, NOVELTY INCONCLUSIVE and RELEASE HOLD. Its raw independent code was not supplied. The mathematical argument below is unchanged from that audited candidate; version labels have been clarified. The new support-reduction lemma and MILP search are separate, unaudited additions in SUPPORT_REDUCTION.md. No public release, exact-value or scholarly-priority claim. All rights reserved.
+ 
+ ## 1. Model and claim boundary
+ 
+@@ -12,12 +12,12 @@
+ 
+     C_k = min {|P| + |supp(P)| : P is a non-coverable finite set of proper k-tuples}.
+ 
+-Zhai [Z, Theorem 3.8 and the stabilization theorem] identifies this invariant with sup_n HGP(B_{k,n}). We also give a direct game proof of our upper bound, so that part does not require importing the full stabilization result.
++Zhai [Z, Theorem 1.1 and Theorem 3.8] identifies this invariant with sup_n HGP(B_{k,n}). We also give a direct game proof of our upper bound, so that part does not require importing the full stabilization result.
+ 
+ Put M_k=1+sum_{r=1}^k r^r. The candidate claims are:
+ 
+ 1. For every k>=3 and n>=1, HGP(B_{k,n}) <= M_k+k^2. More specifically, C_k <= M_k+k^2.
+-2. Every complete Cartesian box consisting of proper tuples gives a strictly larger obstruction score than this bound, for every k>=3. This addresses the box-extremality question in [Z, Section 9.2] in the negative, if the argument survives external audit.
++2. Every complete Cartesian box consisting of proper tuples gives a strictly larger obstruction score than this bound, for every k>=3. This addresses the box-extremality question in [Z, Section 9.2] in the negative, subject to the received audit boundary and the unresolved scholarly-novelty review.
+ 3. Combining existing theorems gives M_k+2k <= C_k <= M_k+k^2 for k>=3. The lower bound is an elementary deduction from prior results, not an independent new lower-bound method.
+ 
+ No claim of C_3=42 is made. No finite page threshold, winning strategy at 42 colors, or resolution of HGP(B_{2,5}) is claimed.
+@@ -38,7 +38,7 @@
+ 
+ ## 3. The inherited uncolored recursion
+ 
+-The recursive geometry here is known: the construction of Gadouleau, presented explicitly in He–Ido–Przybocki [HIP, Lemma 11 and Figure 1]. We do not claim the recursion, its cardinality, or the uncolored minimum-cardinality theorem as new.
++The recursive geometry here is known: the construction of Gadouleau, presented explicitly in He–Ido–Przybocki [HIP-EJC, Lemma 11 and Figure 1; HIP-arXiv, Lemma 2.6 and Figure 1]. We do not claim the recursion, its cardinality, or the uncolored minimum-cardinality theorem as new.
+ 
+ Use zero-based coordinate values and define
+ 
+@@ -91,7 +91,7 @@
+ 
+     (sum_i a_i)(sum_i 1/a_i)>=k^2,
+ 
+-and hence sum_i a_i>k^2, or sum_i a_i>=k^2+1 by integrality. The established minimum-cardinality theorem [HIP, Theorem 2 / Lemmas 8–11] says that every non-coverable k-dimensional point set has at least M_k points. Therefore every such box has score
++and hence sum_i a_i>k^2, or sum_i a_i>=k^2+1 by integrality. The established minimum-cardinality theorem [HIP-EJC, Theorem 2 and Lemmas 8–11; HIP-arXiv, Theorem 1.2 and Lemmas 2.3–2.6] says that every non-coverable k-dimensional point set has at least M_k points. Therefore every such box has score
+ 
+     |T|+|supp(T)| >= M_k+k^2+1 > M_k+k^2 >= C_k.
+ 
+@@ -113,11 +113,13 @@
+ 
+ The standard-library verifier checks counts, properness, support, and projection deficiency at k=3,4,5,6 (33,289,3414,50070 tuples). It separately computes maximum bipartite matchings at k=3 and k=4, obtaining 32 and 288, respectively. Each of the 33 single-point deletions of P_3 becomes coverable. An unsafe color merge produces three improper tuples. These are controls for the finite verifier; the all-k theorem is the induction and direct proof above.
+ 
+-Runs were performed in the assistant's Linux/Python 3.12.14 environment. No author Windows-machine execution is claimed. There is no Lean/Coq proof, external adversarial review, or comprehensive novelty search certification.
++Runs were performed in the assistant's Linux/Python 3.12.14 environment. No author Windows-machine execution is claimed. There is no Lean/Coq proof or comprehensive novelty search certification. The received external audit and its exact scope are recorded in RECEIVED_AUDIT_v0_1.md; its reported computations are distinct from the runs above.
+ 
+ ## References
+ 
+-[HIP] Xiaoyu He, Yuzu Ido, Benjamin Przybocki. *Hat Guessing on Books and Windmills*. Electronic Journal of Combinatorics 29(1), P1.12 (2022). DOI: https://doi.org/10.37236/10098. Publisher full text: https://www.combinatorics.org/ojs/index.php/eljc/article/download/v29i1p12/pdf/ . The recursive construction is attributed there to Gadouleau [its reference 8].
++[HIP-EJC] Xiaoyu He, Yuzu Ido, Benjamin Przybocki. *Hat Guessing on Books and Windmills*. Electronic Journal of Combinatorics 29(1), P1.12 (2022). DOI: https://doi.org/10.37236/10098. Publisher full text: https://www.combinatorics.org/ojs/index.php/eljc/article/download/v29i1p12/pdf/ . The recursive construction is attributed there to Gadouleau [its reference 8].
++
++[HIP-arXiv] Same authors and title. arXiv:2010.13249, October 2020, 18-page PDF inspected on 2026-10-24. https://arxiv.org/pdf/2010.13249 . See REFERENCE_VERSION_MAP.md for the correspondence with the 19-page EJC publication; EJC numbering is not arXiv numbering.
+ 
+ [Z] Yulin Zhai. *Proper Hat-Guessing on Two-Spine Book Graphs*. arXiv:2607.25274v3, 18 August 2026. https://arxiv.org/html/2607.25274v3 . Sections 3, 7 and 9.2 define the support-sensitive invariant, give the box bounds, and ask about box extremality.
+ 

@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "mode": "documented_order",
+      "script": "verify_obstructions.py",
+      "returncode": 0
+    },
+    {
+      "mode": "documented_order",
+      "script": "verify_revision.py",
+      "returncode": 0
+    },
+    {
+      "mode": "changed_environment",
+      "script": "verify_obstructions.py",
+      "returncode": 0
+    },
+    {
+      "mode": "changed_environment",
+      "script": "verify_revision.py",
+      "returncode": 0
+    },
+    {
+      "negative_control": "verification_results.json: upper_bound=41",
+      "rejected": true
+    },
+    {
+      "negative_control": "witness_k3.json: upper_bound=41",
+      "rejected": true
+    }
+  ],
+  "native_windows_tested": false,
+  "native_python313_tested": false,
+  "runtime_python": "3.12.14",
+  "runtime_os": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "regression_script_sha256": "10b46f2c6efe158eb01e94ed78f6ad81834035b51e103ff12d8e75d385398d9b"
+}

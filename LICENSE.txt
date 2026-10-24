@@ -1,0 +1,5 @@
+Copyright (c) 2026 Ryutaro Yonezu. All rights reserved.
+
+No open-source, Creative Commons, or other public reuse license is granted.
+Third-party cited works retain their respective rights and licenses.
+Research inquiries: yonezaemon1+research@gmail.com

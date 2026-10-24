@@ -1,0 +1,15 @@
+{
+  "colours": 8,
+  "point_cap": 33,
+  "tuple_variables": 336,
+  "minimal_hall_core_conditions": true,
+  "projection_flags": 168,
+  "constraints": 1193,
+  "python": "3.12.14",
+  "scipy": "1.17.0",
+  "status_code": 1,
+  "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+  "seconds": 55.00545608900006,
+  "exact_unsat_certificate": false,
+  "global_C3_decided": false
+}

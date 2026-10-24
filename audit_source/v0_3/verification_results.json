@@ -1,0 +1,147 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "scope": "finite checks supplement the all-k induction in PROOF.md",
+  "rows": [
+    {
+      "k": 3,
+      "points": 33,
+      "support": 9,
+      "projection_sizes": [
+        12,
+        11,
+        9
+      ],
+      "projection_sum": 32,
+      "hall_deficiency": 1,
+      "upper_bound": 42
+    },
+    {
+      "k": 4,
+      "points": 289,
+      "support": 16,
+      "projection_sizes": [
+        76,
+        75,
+        73,
+        64
+      ],
+      "projection_sum": 288,
+      "hall_deficiency": 1,
+      "upper_bound": 305
+    },
+    {
+      "k": 5,
+      "points": 3414,
+      "support": 25,
+      "projection_sizes": [
+        701,
+        700,
+        698,
+        689,
+        625
+      ],
+      "projection_sum": 3413,
+      "hall_deficiency": 1,
+      "upper_bound": 3439
+    },
+    {
+      "k": 6,
+      "points": 50070,
+      "support": 36,
+      "projection_sizes": [
+        8477,
+        8476,
+        8474,
+        8465,
+        8401,
+        7776
+      ],
+      "projection_sum": 50069,
+      "hall_deficiency": 1,
+      "upper_bound": 50106
+    }
+  ],
+  "matching": [
+    {
+      "k": 3,
+      "points": 33,
+      "maximum_matching": 32
+    },
+    {
+      "k": 4,
+      "points": 289,
+      "maximum_matching": 288
+    }
+  ],
+  "negative_controls": {
+    "all_33_single_point_deletions_become_coverable": true,
+    "unsafe_colour_merge_improper_tuple_count": 3
+  },
+  "known_uncoloured_base": {
+    "size": 6,
+    "projection_sizes": [
+      3,
+      2
+    ],
+    "claimed_new": false
+  },
+  "box_optima": [
+    {
+      "k": 2,
+      "sides": [
+        2,
+        3
+      ],
+      "bound": 11,
+      "last_coordinate_trials": 1
+    },
+    {
+      "k": 3,
+      "sides": [
+        3,
+        3,
+        4
+      ],
+      "bound": 46,
+      "last_coordinate_trials": 3
+    },
+    {
+      "k": 4,
+      "sides": [
+        3,
+        4,
+        5,
+        5
+      ],
+      "bound": 317,
+      "last_coordinate_trials": 17
+    },
+    {
+      "k": 5,
+      "sides": [
+        4,
+        5,
+        5,
+        5,
+        7
+      ],
+      "bound": 3526,
+      "last_coordinate_trials": 80
+    },
+    {
+      "k": 6,
+      "sides": [
+        5,
+        5,
+        6,
+        7,
+        7,
+        7
+      ],
+      "bound": 51487,
+      "last_coordinate_trials": 295
+    }
+  ],
+  "status": "PASS_FINITE_CHECKS_NOT_NOVELTY_OR_EXTERNAL_AUDIT"
+}

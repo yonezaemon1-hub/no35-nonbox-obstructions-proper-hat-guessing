@@ -1,0 +1,14 @@
+{
+  "colours": 6,
+  "point_cap": 35,
+  "tuple_variables": 120,
+  "projection_flags": 90,
+  "constraints": 373,
+  "python": "3.12.14",
+  "scipy": "1.17.0",
+  "status_code": 2,
+  "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+  "seconds": 5.98146355200015,
+  "exact_unsat_certificate": false,
+  "global_C3_decided": false
+}

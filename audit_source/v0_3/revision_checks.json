@@ -1,0 +1,25 @@
+{
+  "python": "3.12.14",
+  "original_zip_sha256": "6eb385e1eb1d4d5d7baa467aff8f4a29d2f14e8f78bf036ba84518fe41c4ca05",
+  "original_verifier_and_certificates_byte_unchanged": true,
+  "barrier_checks": [
+    {
+      "k": 3,
+      "cube_points": 27,
+      "symbols": 10,
+      "constraint_edges": 44,
+      "clique": 9,
+      "existing_support": 9
+    },
+    {
+      "k": 4,
+      "cube_points": 256,
+      "symbols": 17,
+      "constraint_edges": 134,
+      "clique": 16,
+      "existing_support": 16
+    }
+  ],
+  "unsafe_k2_improper_tuples": 1,
+  "status": "PASS_FINITE_BARRIER_CHECKS_ONLY"
+}

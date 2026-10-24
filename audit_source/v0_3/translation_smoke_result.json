@@ -1,0 +1,24 @@
+{
+  "scope": "g_j(x,y)=x XOR h_j(x XOR y), q=8, n=5",
+  "arbitrary_strategies_decided": false,
+  "python": "3.12.14",
+  "known_affine_five_page_failure_counts": [
+    224,
+    224,
+    224,
+    224,
+    224,
+    224
+  ],
+  "status": "UNKNOWN_LIMIT",
+  "iterations": 156,
+  "counterexample_clauses": 43186,
+  "bad_orbits_processed": 43347,
+  "solver_stats": {
+    "restarts": 155,
+    "conflicts": 52143,
+    "decisions": 79408,
+    "propagations": 647919
+  },
+  "seconds": 8.124592438999912
+}
